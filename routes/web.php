@@ -24,4 +24,7 @@ Route::prefix('admin')->namespace('Admin')->middleware('auth')->group(function (
     Route::get('/home', 'HomeController@index')->name('admin.home');
 });
 
+//guest
+Route::get('posts', 'PostController@index')->name('post.index');
+
 Route::get('/home', 'HomeController@index')->name('admin.home');

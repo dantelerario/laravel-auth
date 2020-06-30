@@ -118,7 +118,8 @@ class PostController extends Controller
         $updated = $post->update($data);
 
         if($updated) {
-            Mail::to('user@gmail.com')->send(new UpdatePost());
+
+            Mail::to('user@test.it')->send(new UpdatePost($post));
 
             return redirect()->route('admin.posts.show', $post->id);
         }

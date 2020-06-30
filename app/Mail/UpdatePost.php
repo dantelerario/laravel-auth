@@ -32,7 +32,7 @@ class UpdatePost extends Mailable
      */
     public function build()
     {
-        return $this->from('prova@test.com')
+        return $this->from('mysite@test.it')
                     ->subject('New post Update ' . $this->post->title)
                     //->view('mail.edit-post')
                     ->markdown('mail.edit-post')
